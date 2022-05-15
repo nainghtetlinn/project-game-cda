@@ -1,0 +1,21 @@
+{
+  "name": "cda",
+  "version": "1.0.0",
+  "description": "Charge Defend Attack",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/styles.css --watch"
+  },
+  "keywords": [
+    "javascript",
+    "typescript",
+    "game"
+  ],
+  "author": "Naing Htet Linn",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.13",
+    "tailwindcss": "^3.0.24"
+  }
+}

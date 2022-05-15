@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charge Defend Attack</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./dist/styles.css" />
+    <script defer src="./dist/app.js"></script>
+  </head>
+  <body class="bg-blue-900 flex justify-center items-center min-h-screen">
+    <div class="game-result-container fixed inset-0 bg-black/70 hidden">
+      <div class="absolute inset-0 flex justify-center items-center">
+        <div class="bg-white rounded py-2 px-8 flex flex-col items-center">
+          <h3 class="game-result-text text-2xl mb-6 mt-4 capitalize"></h3>
+          <button
+            class="restart-btn bg-blue-900 text-white py-2 px-4 m-2 rounded shadow-md"
+          >
+            Restart
+          </button>
+        </div>
+      </div>
+    </div>
+    <section
+      class="max-w-md bg-blue-900 grid grid-cols-8 grid-rows-5 grid-flow-col-dense"
+    >
+      <div class="col-span-5 row-span-2 mb-2 mr-2 p-2 bg-white rounded">
+        <h3 class="text-lg mb-2">Computer</h3>
+
+        <div class="flex items-center">
+          <span class="w-16 inline-block">Heart - </span>
+          <div class="computer-heart-stats text-sm"></div>
+        </div>
+
+        <div class="flex items-center">
+          <span class="w-16 inline-block">Energy - </span>
+          <div class="computer-energy-stats text-sm"></div>
+        </div>
+      </div>
+
+      <div class="col-span-5 row-span-2 mb-2 mr-2 p-2 bg-white rounded">
+        <h3 class="text-lg mb-2">You</h3>
+
+        <div class="flex items-center">
+          <span class="w-16 inline-block">Heart - </span>
+          <div class="player-heart-stats text-sm">
+            <i class="bi bi-heart-fill"></i>
+            <i class="bi bi-heart-fill"></i>
+            <i class="bi bi-heart-fill"></i>
+            <i class="bi bi-heart"></i>
+            <i class="bi bi-heart"></i>
+          </div>
+        </div>
+
+        <div class="flex items-center">
+          <span class="w-16 inline-block">Energy - </span>
+          <div class="player-energy-stats text-sm">
+            <i class="bi bi-lightning-charge-fill"></i>
+            <i class="bi bi-lightning-charge-fill"></i>
+            <i class="bi bi-lightning-charge"></i>
+            <i class="bi bi-lightning-charge"></i>
+            <i class="bi bi-lightning-charge"></i>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-span-3 row-span-full bg-white rounded-t rounded-br flex flex-col justify-around"
+      >
+        <div class="p-2 flex flex-col items-center">
+          <div
+            class="computer-move h-20 w-20 bg-gray-200 rounded flex justify-center items-center text-2xl"
+          ></div>
+
+          <div class="p-2">
+            <h4 class="game-message text-center font-bold text-xl">VS</h4>
+          </div>
+
+          <div
+            class="player-move h-20 w-20 bg-gray-200 rounded flex justify-center items-center text-2xl"
+          ></div>
+        </div>
+        <div class="flex justify-center items-center">
+          <button
+            class="fight-btn bg-blue-900 hover:bg-blue-700 text-white py-2 px-4 rounded disabled:opacity-50"
+          >
+            Fight
+          </button>
+        </div>
+      </div>
+
+      <div class="col-span-5 row-span-1 bg-white rounded-l">
+        <div class="m-2 flex items-center justify-between">
+          <button
+            data-move="charge"
+            data-type="button"
+            class="bg-white p-2 rounded hover:bg-blue-100 flex flex-col justify-center items-center disabled:opacity-50"
+          >
+            <i class="bi bi-lightning-charge-fill mr-1"></i><span>Charge</span>
+          </button>
+          <button
+            data-move="defend"
+            data-type="button"
+            class="bg-white p-2 rounded hover:bg-blue-100 flex flex-col justify-center items-center disabled:opacity-50"
+          >
+            <i class="bi bi-shield-fill mr-1"></i><span>Defend</span>
+          </button>
+          <button
+            data-move="attack"
+            data-type="button"
+            class="bg-white p-2 rounded hover:bg-blue-100 flex flex-col justify-center items-center disabled:opacity-50"
+          >
+            <i class="bi bi-magic mr-1"></i><span>Attack</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
