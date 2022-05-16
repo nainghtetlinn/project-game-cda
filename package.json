@@ -1,6 +1,6 @@
 {
   "name": "cda",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Charge Defend Attack",
   "main": "index.js",
   "scripts": {
